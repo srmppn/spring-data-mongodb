@@ -98,7 +98,7 @@ public class ReactiveQuerydslMongoPredicateExecutor<T> extends QuerydslPredicate
 
 		Assert.notNull(predicate, "Predicate must not be null");
 
-		return createQueryFor(predicate).fetch();
+		return createQueryFor(predicate).limit(10).offset(0).fetch();
 	}
 
 	@Override
